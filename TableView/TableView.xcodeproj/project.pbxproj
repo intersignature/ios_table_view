@@ -15,6 +15,7 @@
 		B24015C620F3629400E1717E /* TableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24015C520F3629400E1717E /* TableViewTests.swift */; };
 		B24015D120F3629400E1717E /* TableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24015D020F3629400E1717E /* TableViewUITests.swift */; };
 		B24015DF20F3630E00E1717E /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24015DE20F3630E00E1717E /* MyTableViewController.swift */; };
+		B24015E120F36BAA00E1717E /* PetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24015E020F36BAA00E1717E /* PetDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B24015D020F3629400E1717E /* TableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewUITests.swift; sourceTree = "<group>"; };
 		B24015D220F3629400E1717E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B24015DE20F3630E00E1717E /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
+		B24015E020F36BAA00E1717E /* PetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				B24015B020F3629300E1717E /* AppDelegate.swift */,
 				B24015B220F3629300E1717E /* ViewController.swift */,
+				B24015E020F36BAA00E1717E /* PetDetailViewController.swift */,
 				B24015B420F3629300E1717E /* Main.storyboard */,
 				B24015B720F3629400E1717E /* Assets.xcassets */,
 				B24015B920F3629400E1717E /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 				B24015B320F3629300E1717E /* ViewController.swift in Sources */,
 				B24015DF20F3630E00E1717E /* MyTableViewController.swift in Sources */,
 				B24015B120F3629300E1717E /* AppDelegate.swift in Sources */,
+				B24015E120F36BAA00E1717E /* PetDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

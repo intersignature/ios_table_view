@@ -48,8 +48,20 @@ class MyTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let pet:String = pets[indexPath.row]
+        
         tableView.deselectRow(at: indexPath, animated: true)
-        self.performSegue(withIdentifier: "petSegue", sender: nil)
+        self.performSegue(withIdentifier: "petSegue", sender: pet)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "petSegue" {
+            if let petDetail = segue.destination as? PetDetailViewController {
+                if let strTemp = sender as? String {
+                    petDetail.pet = strTemp
+                }
+            }
+        }
     }
     
     /*
