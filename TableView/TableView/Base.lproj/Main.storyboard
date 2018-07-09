@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14111" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HAX-0H-pfy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14111" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ykb-Hb-dVR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Table View Controller-->
+        <!--Pet-->
         <scene sceneID="Ant-qj-0hN">
             <objects>
                 <tableViewController id="HAX-0H-pfy" customClass="MyTableViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -49,10 +49,14 @@
                             <outlet property="delegate" destination="HAX-0H-pfy" id="1Uy-4S-Cic"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Pet" prompt="สัตว์เลี้ยง" id="D38-fB-YfU"/>
+                    <connections>
+                        <segue destination="wOp-EP-i7z" kind="show" identifier="petSegue" id="kbt-ts-iXN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tG5-un-xrc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-82" y="51"/>
+            <point key="canvasLocation" x="856.79999999999995" y="50.824587706146929"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OdL-dK-oN5">
@@ -67,7 +71,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pV-eb-2MY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="623" y="51"/>
+            <point key="canvasLocation" x="1560.8" y="50.824587706146929"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tJ1-BI-p1P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ykb-Hb-dVR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EI9-ef-t6h">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HAX-0H-pfy" kind="relationship" relationship="rootViewController" id="MXj-C6-QV5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8dg-c3-SCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-82.400000000000006" y="50.824587706146929"/>
         </scene>
     </scenes>
 </document>
