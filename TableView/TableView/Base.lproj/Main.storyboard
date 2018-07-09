@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -75,17 +77,40 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAw-Jb-mq2">
+                                <rect key="frame" x="0.0" y="89" width="375" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="0lw-Sv-iCY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1aC-0e-FhB">
+                                <rect key="frame" x="0.0" y="114" width="333.5" height="333.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1aC-0e-FhB" secondAttribute="height" multiplier="1:1" id="V7n-Hh-Di1"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wnb-Kt-k3j" firstAttribute="top" secondItem="UVn-fB-kvH" secondAttribute="top" id="QgN-JX-S9T"/>
+                            <constraint firstItem="lAw-Jb-mq2" firstAttribute="top" secondItem="wnb-Kt-k3j" secondAttribute="bottom" id="VdP-KW-Jaa"/>
+                            <constraint firstItem="UVn-fB-kvH" firstAttribute="trailing" secondItem="lAw-Jb-mq2" secondAttribute="trailing" id="XNA-MC-ZEZ"/>
                             <constraint firstItem="wnb-Kt-k3j" firstAttribute="leading" secondItem="UVn-fB-kvH" secondAttribute="leading" id="Ydj-eB-wDm"/>
+                            <constraint firstItem="1aC-0e-FhB" firstAttribute="top" secondItem="lAw-Jb-mq2" secondAttribute="bottom" id="asq-Fj-EiN"/>
+                            <constraint firstItem="lAw-Jb-mq2" firstAttribute="leading" secondItem="UVn-fB-kvH" secondAttribute="leading" id="bTL-3W-1D0"/>
                             <constraint firstItem="UVn-fB-kvH" firstAttribute="trailing" secondItem="wnb-Kt-k3j" secondAttribute="trailing" id="hit-qX-KhQ"/>
+                            <constraint firstItem="1aC-0e-FhB" firstAttribute="leading" secondItem="UVn-fB-kvH" secondAttribute="leading" id="kHi-h7-0ij"/>
+                            <constraint firstItem="1aC-0e-FhB" firstAttribute="height" secondItem="BQk-Ep-riy" secondAttribute="height" multiplier="0.5" id="xLJ-5U-n8c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UVn-fB-kvH"/>
                     </view>
                     <connections>
+                        <outlet property="detailLb" destination="lAw-Jb-mq2" id="AFa-KY-oDy"/>
                         <outlet property="nameLb" destination="wnb-Kt-k3j" id="4sy-5o-Ip4"/>
+                        <outlet property="pictureImg" destination="1aC-0e-FhB" id="6BQ-tx-Hha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pV-eb-2MY" userLabel="First Responder" sceneMemberID="firstResponder"/>

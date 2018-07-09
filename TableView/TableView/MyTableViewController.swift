@@ -10,12 +10,12 @@ import UIKit
 
 class MyTableViewController: UITableViewController {
 
-    var pets = ["dog", "cat", "tiger", "lion"]
+    var pets = [Pet]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        createPets()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -30,6 +30,37 @@ class MyTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    func createPets() {
+        //["dog", "cat", "tiger", "lion"]
+        let dog = Pet()
+        dog.name = "name dog"
+        dog.detail = "detail dog"
+        dog.picture = UIImage(named: "dog")!
+        pets.append(dog)
+        
+        let cat = Pet()
+        cat.name = "name cat"
+        cat.detail = "detail cat"
+        cat.picture = UIImage(named: "cat")!
+        pets.append(cat)
+        
+        let lion = Pet()
+        lion.name = "name lion"
+        lion.detail = "detail lion"
+        lion.picture = UIImage(named: "lion")!
+        pets.append(lion)
+        
+        let tiger = Pet()
+        tiger.name = "name tiger"
+        tiger.detail = "detail tiger"
+        tiger.picture = UIImage(named: "tiger")!
+        pets.append(tiger)
+        
+        let human = Pet(name: "name human", detail: "detail human")
+        pets.append(human)
+        
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -42,13 +73,13 @@ class MyTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "petCell", for: indexPath)
-        cell.textLabel?.text = self.pets[indexPath.row]
-        cell.detailTextLabel?.text = "\(self.pets[indexPath.row]) น่ารักกก"
+        cell.textLabel?.text = self.pets[indexPath.row].name
+        cell.detailTextLabel?.text = self.pets[indexPath.row].detail
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let pet:String = pets[indexPath.row]
+        let pet:Pet = pets[indexPath.row]
         
         tableView.deselectRow(at: indexPath, animated: true)
         self.performSegue(withIdentifier: "petSegue", sender: pet)
@@ -57,8 +88,8 @@ class MyTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "petSegue" {
             if let petDetail = segue.destination as? PetDetailViewController {
-                if let strTemp = sender as? String {
-                    petDetail.pet = strTemp
+                if let pet = sender as? Pet {
+                    petDetail.pet = pet
                 }
             }
         }

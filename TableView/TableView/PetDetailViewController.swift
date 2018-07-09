@@ -10,14 +10,19 @@ import UIKit
 
 class PetDetailViewController: UIViewController {
 
-    var pet:String = ""
+    var pet:Pet = Pet()
     
+    @IBOutlet weak var detailLb: UILabel!
+    @IBOutlet weak var pictureImg: UIImageView!
     @IBOutlet weak var nameLb: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        nameLb.text = pet
+        nameLb.text = pet.name
+        detailLb.text = pet.detail
+        pictureImg.image = pet.picture
     }
 
     override func didReceiveMemoryWarning() {
